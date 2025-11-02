@@ -47,31 +47,37 @@ text
 ## 📂 Project Structure
 
 RLMidterm/
-│
-├── core/ # Core Q-Learning implementation
-│ ├── environment.py # Room-based grid environment
-│ └── qlearner.py # Q-Learning agent
-│
-├── config/ # Configuration management
-│ └── defaults.py # Hyperparameter defaults
-│
-├── experiments/ # Experiment runner
-│ ├── configs/ # Experiment configurations
-│ │ ├── baseline.yaml # Config 1 settings
-│ │ └── modified.yaml # Config 2 settings
-│ └── runner.py # Training loop
-│
-├── analysis/ # Results analysis
-│ ├── metrics.py # Performance metrics calculation
-│ └── plotter.py # Visualization utilities
-│
-├── utils/ # Utility functions
-│ └── logging.py # Logging configuration
-│
-├── main.py # Entry point
-└── requirements.txt # Dependencies
+|
++-- core/                          # Core Q-Learning implementation
+|   +-- __init__.py               # Package init
+|   +-- environment.py            # Room-based grid environment
+|   +-- qlearner.py               # Q-Learning agent
+|
++-- config/                        # Configuration management
+|   +-- __init__.py               # Package init
+|   +-- defaults.py               # Hyperparameter defaults
+|
++-- experiments/                   # Experiment runner
+|   +-- configs/                  # Experiment configurations
+|   |   +-- baseline.yaml         # Config 1 settings (B->F)
+|   |   +-- modified.yaml         # Config 2 settings (A->C)
+|   +-- __init__.py               # Package init
+|   +-- runner.py                 # Training loop
+|
++-- analysis/                      # Results analysis
+|   +-- __init__.py               # Package init
+|   +-- metrics.py                # Performance metrics calculation
+|   +-- plotter.py                # Visualization utilities
+|
++-- utils/                         # Utility functions
+|   +-- __init__.py               # Package init
+|   +-- logging.py                # Logging configuration
+|
++-- main.py                        # Entry point script
++-- requirements.txt               # Python dependencies
++-- README.md                       # Project documentation
++-- report.pdf                      # Full analysis report
 
-text
 
 ## 🧠 Algorithm: Q-Learning Update Rule
 
