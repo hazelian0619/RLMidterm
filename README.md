@@ -46,37 +46,20 @@ text
 
 ## 📂 Project Structure
 
-RLMidterm/
-|
-+-- core/                          # Core Q-Learning implementation
-|   +-- __init__.py               # Package init
-|   +-- environment.py            # Room-based grid environment
-|   +-- qlearner.py               # Q-Learning agent
-|
-+-- config/                        # Configuration management
-|   +-- __init__.py               # Package init
-|   +-- defaults.py               # Hyperparameter defaults
-|
-+-- experiments/                   # Experiment runner
-|   +-- configs/                  # Experiment configurations
-|   |   +-- baseline.yaml         # Config 1 settings (B->F)
-|   |   +-- modified.yaml         # Config 2 settings (A->C)
-|   +-- __init__.py               # Package init
-|   +-- runner.py                 # Training loop
-|
-+-- analysis/                      # Results analysis
-|   +-- __init__.py               # Package init
-|   +-- metrics.py                # Performance metrics calculation
-|   +-- plotter.py                # Visualization utilities
-|
-+-- utils/                         # Utility functions
-|   +-- __init__.py               # Package init
-|   +-- logging.py                # Logging configuration
-|
-+-- main.py                        # Entry point script
-+-- requirements.txt               # Python dependencies
-+-- README.md                       # Project documentation
-+-- report.pdf                      # Full analysis report
+| Directory | Files | Purpose |
+|-----------|-------|---------|
+| `core/` | `environment.py`, `qlearner.py` | Q-Learning algorithm & GridWorld |
+| `config/` | `defaults.py` | Hyperparameter configuration |
+| `experiments/` | `runner.py`, `configs/*.yaml` | Experiment execution & configs |
+| `analysis/` | `metrics.py`, `plotter.py` | Result analysis & visualization |
+| `utils/` | `logging.py` | Utility functions |
+| Root | `main.py`, `requirements.txt` | Entry point & dependencies |
+
+### File Descriptions
+- **main.py**: Run `python main.py` to execute both configurations
+- **requirements.txt**: Install dependencies with `pip install -r requirements.txt`
+- **experiments/configs/baseline.yaml**: Configuration 1 (B→F, 1-step)
+- **experiments/configs/modified.yaml**: Configuration 2 (A→C, 3-step)
 
 
 ## 🧠 Algorithm: Q-Learning Update Rule
